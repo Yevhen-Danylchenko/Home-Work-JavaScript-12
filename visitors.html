@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="nav-content flex">
+            <h2 class="title">Бібліотека</h2>
+            <nav>
+                <ul class="ul-content flex">
+                    <li>
+                        <div class="div-link"><a href="index.html" target="_blank">Книжки</a></div>
+                    </li>
+                    <li>
+                        <div class="div-link"><a href="visitors.html" target="_blank">Відвідувачі</a></div>
+                    </li>
+                    <li>
+                        <div class="div-link"><a href="cards.html" target="_blank">Картки</a></div>
+                    </li>
+                    <li>
+                        <div class="div-link"><a href="statistics.html" target="_blank">Статистика</a></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <section>
+
+                <div class="books">
+
+                    <h2 class="title-search">Відвідувачі</h2>
+
+                    <div class="search-book">
+                        <input type="text" placeholder="Пошук відвідувача">
+                        <button class="search-book-btn">Знайти</button>
+                    </div>
+
+                    <div class="search-book">
+                        <ul id="book-list-ul">
+                
+                        </ul>
+                    </div>
+
+                    <div class="book-list">
+
+                        <h2 class="title-search">Облік відвідувачів</h2>
+
+                        <table class="table-title flex">
+                            <tr>
+                                <th>Ім'я</th>
+                                <th>Фамілія</th>
+                                <th>Телефон</th>
+                                <th>ID</th>
+                                <th>Змінити</th>
+                                <th>Видалити</th>
+                            </tr>
+                            <tr>
+                                <td>Максим</td>
+                                <td>Мельник</td>
+                                <td>097-567-34-20</td>
+                                <td>46</td>
+                                <td><button class="search-book-btn">Змінити</button></td>
+                                <td><button class="search-book-btn">Видалити</button></td>
+                            </tr>
+                            <tr>
+                                <td>Марк</td>
+                                <td>Коваленко</td>
+                                <td>066-326-17-43</td>
+                                <td>74</td>
+                                <td><button class="search-book-btn">Змінити</button></td>
+                                <td><button class="search-book-btn">Видалити</button></td>
+                            </tr>
+                            <tr>
+                                <td>Олександр</td>
+                                <td>Ковальчук</td>
+                                <td>063-708-90-45</td>
+                                <td>21</td>
+                                <td><button class="search-book-btn">Змінити</button></td>
+                                <td><button class="search-book-btn">Видалити</button></td>
+                            </tr>
+                            <tr>
+                                <td>Данило</td>
+                                <td>Шевчук</td>
+                                <td>098-723-73-93</td>
+                                <td>34</td>
+                                <td><button class="search-book-btn">Змінити</button></td>
+                                <td><button class="search-book-btn">Видалити</button></td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <h2 class="title-search">Додати відвідувача</h2>
+
+                    <div class="add-book">
+                        <input type="text" id="book-title" placeholder="Ім'я">
+                        <input type="text" id="book-author" placeholder="Фамілія">
+                        <input type="text" id="number" placeholder="Телефон">
+                        <input type="text" id="number" placeholder="ID">
+                        <button id="add-book-button" class="search-book-btn">Додати</button>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+
+    <!-- <script src="script.js"></script> -->
+    
+</body>
+</html>

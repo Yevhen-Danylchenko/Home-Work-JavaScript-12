@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="nav-content flex">
+            <h2 class="title">Бібліотека</h2>
+            <nav>
+                <ul class="ul-content flex">
+                    <li>
+                        <div class="div-link"><a href="index.html" target="_blank">Книжки</a></div>
+                    </li>
+                    <li>
+                        <div class="div-link"><a href="visitors.html" target="_blank">Відвідувачі</a></div>
+                    </li>
+                    <li>
+                        <div class="div-link"><a href="cards.html" target="_blank">Картки</a></div>
+                    </li>
+                    <li>
+                        <div class="div-link"><a href="statistics.html" target="_blank">Статистика</a></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <section>
+
+                <div class="books">
+
+                    <h2 class="title-search">Пошук книжок</h2>
+
+                    <div class="search-book">
+                        <input type="text" id="search-book" placeholder="Пошук книги">
+                        <button class="search-book-btn" id="search-book-btn">Знайти книгу</button>
+                    </div>
+
+                    <div class="search-book">
+                        <ul id="book-list-ul">
+                
+                        </ul>
+                    </div>
+
+                    <div class="book-list">
+
+                        <h2 class="title-search">Список книг</h2>
+
+                        <table class="table-title" id="book-list">
+                            <tr class="table-content">
+                                <th>Назва книги</th>
+                                <th>Автор книги</th>
+                                <th>Кількість книг</th>
+                                <th>Змінити книгу</th>
+                                <th>Видалити книгу</th>
+                            </tr>
+                            <tr>
+                                <td>Казка</td>
+                                <td>Стівен Кінг</td>
+                                <td>5</td>
+                                <td><button class="search-book-btn">Змінити</button></td>
+                                <td><button class="search-book-btn">Видалити</button></td>
+                            </tr>
+                            <tr>
+                                <td>Окрема реальність</td>
+                                <td>Карлос Кастанеда</td>
+                                <td>3</td>
+                                <td><button class="search-book-btn">Змінити</button></td>
+                                <td><button class="search-book-btn">Видалити</button></td>
+                            </tr>
+                            <tr>
+                                <td>Демон Проспера Потойбічник</td>
+                                <td>К. Дж. Паркер</td>
+                                <td>1</td>
+                                <td><button class="search-book-btn">Змінити</button></td>
+                                <td><button class="search-book-btn">Видалити</button></td>
+                            </tr>
+                        </table>
+<!-- 
+                        <div class="table-title" id="book-list">
+                            <ul class="table-content flex">
+                                <li>Назва книги</li>
+                                <li>Автор книги</li>
+                                <li>Кількість книг</li>
+                                <li>Змінити книгу</li>
+                                <li>Видалити книгу</li>
+                            </ul>
+                            <ul class="table-content flex">
+                                <li>Казка</li>
+                                <li>Стівен Кінг</li>
+                                <li>5</li>
+                                <li><button class="search-book-btn">Змінити</button></li>
+                                <li><button class="search-book-btn">Видалити</button></li>
+                            </ul>
+                            <ul class="table-content flex">
+                                <li>Окрема реальність</li>
+                                <li>Карлос Кастанеда</li>
+                                <li>3</li>
+                                <li><button class="search-book-btn">Змінити</button></li>
+                                <li><button class="search-book-btn">Видалити</button></li>
+                            </ul>
+                            <ul class="table-content flex">
+                                <li>Демон Проспера Потойбічник</li>
+                                <li>К. Дж. Паркер</li>
+                                <li>1</li>
+                                <li><button class="search-book-btn">Змінити</button></li>
+                                <li><button class="search-book-btn">Видалити</button></li>
+                            </ul>
+                        </div> -->
+
+                    </div>
+
+                    <h2 class="title-search">Додати книгу</h2>
+
+                    <div class="add-book">
+                        <input type="text" id="book-title" placeholder="Назва книги">
+                        <input type="text" id="book-author" placeholder="Автор книги">
+                        <input type="text" id="number" placeholder="Кількість екземплярів">
+                        <button id="add-book-button" class="search-book-btn" id="add-book">Додати книгу</button>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

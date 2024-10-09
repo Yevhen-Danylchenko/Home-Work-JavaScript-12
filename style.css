@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --text-color: #b6e2bb;
+    --linc-color: #ebecec;
+    --link-color-hov: #c5caca;
+    --nav-bcg-color: #ec8e12;
+    --border-color: #889191;
+    --text-par-color: #3a3939;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 1850px;
+
+    font-family: 'Inter', serif;
+
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+
+    background-image: url(./images/back-images.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    font-family: 'Montserrat', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-decoration: none;
+    
+    color: var(--linc-color);
+}
+
+a:hover{
+    cursor: pointer;
+    color: var(--link-color-hov);
+}
+
+.flex {
+    display: flex;
+}
+
+/* =================== Header====================== */
+
+.title {
+    font-family: 'Inter', serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+
+    text-transform: uppercase;
+
+    color: var(--text-color);
+
+    margin-bottom: 20px;
+}
+
+.nav-content {
+    width: 100%;
+    height: 80px;
+
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: var(--nav-bcg-color);
+    opacity: 50%;
+
+}
+
+.ul-content {
+    justify-content: space-around;
+
+    gap: 50px;
+}
+
+.div-link {
+    width: 200px;
+    height: 40px;
+
+    text-align: center;
+
+    background-color: #5e3705;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+
+    padding: 5px 0;
+}
+
+.div-link:hover {
+    cursor: pointer;
+}
+
+/* ===================== Пошук книжок================ */
+
+.books {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.title-search {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--text-color);
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.table-title{
+    text-align: center;
+
+    background-color: var(--nav-bcg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+
+    padding: 0;
+    margin: 50px 0 50px 0;
+}
+
+.table-title ul li {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;    
+
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--text-par-color);
+}
+
+.table-title ul {
+    width: 150px;
+
+    gap: 40px;
+}
+
+input {
+    width: 630px;
+    height: 40px;
+
+    background-color: var(--nav-bcg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+::placeholder {
+    font-family: 'Montserrat', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+    color: var(--text-par-color);
+}
+
+.search-book-btn{
+    width: 200px;
+    height: 40px;
+
+    font-family: 'Montserrat', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    color: var(--text-par-color);
+
+    margin-left: 40px;
+}
