@@ -16,16 +16,17 @@ const num = document.getElementById('number');
 
 const searchVisitors = document.getElementById('search-visitors');
 const searchVisitorsButton = document.getElementById('search-visitors-button');
-const visitorsTable = document.getElementById('visitors-table').getElementsByTagName('tbody')[0];
 const visitorsListUl = document.getElementById('visitors-list-ul');
+const visitorsTable = document.getElementById('visitors-table').getElementsByTagName('tbody')[0];
+
 
 // ====================== Змінні для додавання читача =================
 
-const nameVisitor = document.getElementById('name-visitor');
-const lastNameVisitor = document.getElementById('last-name-visitor');
-const numberTelephon = document.getElementById('number-telephon');
-const idNumber = document.getElementById('ID');
-const addVisitorsButton = document.getElementById('add-visitors-button');
+// const nameVisitor = document.getElementById('name-visitor');
+// const lastNameVisitor = document.getElementById('last-name-visitor');
+// const numberTelephon = document.getElementById('number-telephon');
+// const idNumber = document.getElementById('ID');
+// const addVisitorsButton = document.getElementById('add-visitors-button');
  
 
 // ====================== Пошук книжок ===========================
@@ -121,27 +122,27 @@ searchVisitorsButton.addEventListener('click', () => {
 
 // ======================= Додавання відвідувачів =======================
 
-addVisitorsButton.addEventListener('click', function () {
-    const name = nameVisitor.value;
-    const lastName = lastNameVisitor.value;
-    const number = numberTelephon.value;
-    const idNumber1 = idNumber.value;
+// addVisitorsButton.addEventListener('click', function () {
+//     const name = nameVisitor.value;
+//     const lastName = lastNameVisitor.value;
+//     const number = numberTelephon.value;
+//     const idNumber1 = idNumber.value;
 
-    if (name && lastName && number && idNumber1) {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${name}</td>
-                            <td>${lastName}</td>
-                            <td>${number}</td>
-                            <td>${idNumber1}</td>
-                            <td><button class="search-book-btn">Змінити</button></td>
-                            <td><button class="search-book-btn">Видалити</button></td>`;
-        bookList.appendChild(tr);
-        nameVisitor.value = '';
-        lastNameVisitor.value = '';
-        numberTelephon.value = '';
-        idNumber.value = '';
-    }
-    else {
-        alert('Будь ласка заповніть всі поля.');
-    }
-})
+//     if (name && lastName && number && idNumber1) {
+//         const tr = document.createElement('tr');
+//         tr.innerHTML = `<td>${name}</td>
+//                             <td>${lastName}</td>
+//                             <td>${number}</td>
+//                             <td>${idNumber1}</td>
+//                             <td><button class="search-book-btn">Змінити</button></td>
+//                             <td><button class="search-book-btn">Видалити</button></td>`;
+//         visitorsTable.appendChild(tr);
+//         nameVisitor.value = '';
+//         lastNameVisitor.value = '';
+//         numberTelephon.value = '';
+//         idNumber.value = '';
+//     }
+//     else {
+//         alert('Будь ласка заповніть всі поля.');
+//     }
+// })
