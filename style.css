@@ -137,7 +137,7 @@ a:hover{
     margin: 50px 0 50px 0;
 }
 
-.table-title ul li {
+.table-title tr th {
     font-size: 18px;
     font-weight: 400;
     line-height: 20px;    
@@ -148,7 +148,7 @@ a:hover{
     color: var(--text-par-color);
 }
 
-.table-title ul {
+.table-title tr {
     width: 150px;
 
     gap: 40px;
@@ -195,3 +195,4 @@ input {
 
     margin-left: 40px;
 }
+
