@@ -36,6 +36,20 @@ const idNumber = document.getElementById('ID');
 const addVisitorsButton = document.getElementById('add-visitors-button');
 
 
+// ========================= Змінні для додавання карток ==================
+
+const bookTitle1 = document.getElementById('book-title-1');
+const bookAuthor1 = document.getElementById('book-author-1');
+const nameVisitor1 = document.getElementById('name-visitor-1');
+const numberId = document.getElementById('number-id');
+const addBookButton = document.getElementById('add-book-button');
+
+
+// =================== Змінні для статистики ========================
+
+let counter = 0;
+
+
 // ====================== Пошук книжок ===========================
 
 searchBookBtn.addEventListener('click', () => {
@@ -196,3 +210,35 @@ addVisitorsButton.addEventListener('click', function () {
         alert('Будь ласка заповніть всі поля.');
     }
 });
+
+
+// ============================ Додавання карток =========================
+
+addBookButton.addEventListener('click', function () {
+    const title = bookTitle1.value;
+    const author = bookAuthor1.value;
+    const nameVisitor11 = nameVisitor1.value;
+    const numberId1 = numberId.value;
+
+    if (title && author && nameVisitor11 && numberId1) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${title}</td>
+                            <td>${author}</td>
+                            <td>${nameVisitor11}</td>
+                            <td>${numberId1}}</td>
+                            <td><button class="search-book-btn">Змінити</button></td>
+                            <td><button class="search-book-btn">Видалити</button></td>`;
+        bookList1.appendChild(tr);
+        button.classList.add('search-book-btn');
+        bookTitle1.value = '';
+        bookAuthor1.value = '';
+        nameVisitor1.value = '';
+        numberId.value = '';
+
+        counter += 1;
+    }
+    else {
+        alert('Будь ласка заповніть всі поля.');
+    }
+});
+
