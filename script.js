@@ -193,3 +193,105 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// ========================= Функція для пошуку книг додавання та видалення у картках ================
+
+document.addEventListener('DOMContentLoaded', function () {
+ 
+    const addBookButtonCards = document.getElementById('add-book-button-cards');
+    const bookTitleCards = document.getElementById('book-title-cards');
+    const bookAuthorCards = document.getElementById('book-author-cards');
+    const nameVisitorCards = document.getElementById('name-visitor-cards')
+    const numberIdCards = document.getElementById('number-id-cards');
+    const bookListBodyCards = document.getElementById('book-list-body-cards');  
+
+    const searchBookCards = document.getElementById('search-book-cards');
+    const searchBookBtnCards = document.getElementById('search-book-btn-cards');
+    const bookListUlCards = document.getElementById('book-list-ul-cards');  
+
+  
+    addBookButtonCards.addEventListener('click', function () {
+        const title = bookTitleCards.value.trim();
+        const author = bookAuthorCards.value.trim();
+        const name = nameVisitorCards.value.trim();
+        const number = numberIdCards.value.trim();
+
+    
+        if (title && author && name && number) {
+      
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${title}</td>
+                            <td>${author}</td>
+                            <td>${name}</td>
+                            <td>${number}</td>
+                            <td><button class="search-book-btn">Змінити</button></td>
+                            <td><button class="search-book-btn">Видалити</button></td>`;
+
+            bookListBodyCards.appendChild(tr);
+
+            bookTitleCards.value = '';
+            bookAuthorCards.value = '';
+            nameVisitorCards.value = '';
+            numberIdCards.value = '';
+        } else {
+            alert('Будь ласка, заповніть всі поля.');
+        }
+    });
+
+    // =================== Функція для пошуку картки =====================
+
+    searchBookBtnCards.addEventListener('click', function () {
+        const searchBookText = searchBookCards.value.toLowerCase();
+        bookListUlCards.innerHTML = ''; 
+        let found = false;
+
+        // =================== Шукаємо в таблиці карток =======================
+        const rows = bookListBodyCards.getElementsByTagName('tr');
+
+        for (let i = 0; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            if (cells.length > 1) {
+                const title = cells[0].innerText.toLowerCase();
+                const author = cells[1].innerText.toLowerCase();
+                const name = cells[2].innerText.toLowerCase();
+                const number = cells[3].innerText.toLowerCase();
+
+              
+                if (title.includes(searchBookText) || author.includes(searchBookText) || name.includes(searchBookText) || number.includes(searchBookText)) {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${cells[0].innerText}</td>
+                                    <td>${cells[1].innerText}</td>
+                                    <td>${cells[2].innerText}</td>
+                                    <td>${cells[3].innerText}</td>
+                                    <td><button class="search-book-btn">Видалити</button></td>`;
+                    bookListUlCards.appendChild(tr);  // Додаємо результат до таблиці пошуку
+                    found = true;
+                }
+            }
+        }
+
+        if (!found) {
+            alert('Така картка не знайдена.');
+        }
+
+
+        searchBookCards.value = '';
+    });
+
+ 
+    bookListBodyCards.addEventListener('click', function (event) {
+        if (event.target.tagName === 'BUTTON' && event.target.innerText === 'Видалити') {
+            const row = event.target.closest('tr');
+            row.remove();  
+        }
+    });
+
+    bookListUlCards.addEventListener('click', function (event) {
+        if (event.target.tagName === 'BUTTON' && event.target.innerText === 'Видалити') {
+            const row = event.target.closest('tr');
+            row.remove();  
+        }
+    });
+});
+
+
