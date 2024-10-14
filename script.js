@@ -207,7 +207,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const searchBookCards = document.getElementById('search-book-cards');
     const searchBookBtnCards = document.getElementById('search-book-btn-cards');
-    const bookListUlCards = document.getElementById('book-list-ul-cards');  
+    const bookListUlCards = document.getElementById('book-list-ul-cards');
+
+    const dellBookButtonCards = document.getElementById('dell-book-button-cards');
+    const bookTitleCardsDell = document.getElementById('book-title-cards-dell');
+    const bookAuthorCardsDell = document.getElementById('book-author-cards-dell');
+    const nameVisitorCardsDell = document.getElementById('name-visitor-cards-dell');
+    const numberIdCardsDell = document.getElementById('number-id-cards-dell');
 
   
     addBookButtonCards.addEventListener('click', function () {
@@ -292,6 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
             row.remove();  
         }
     });
+
 });
 
 
